@@ -13,7 +13,21 @@ vector<string> split(const string &);
  */
 
 void miniMaxSum(vector<int> arr) {
-
+    long long int min = 0;
+    long long int max = 0;
+    long long int sum = 0;
+    long long int minEle, maxEle;
+    
+    std::sort(arr.begin(), arr.end());
+    minEle = arr[0];
+    maxEle = arr[4];
+    for(int i = 0; i < 5; i++){
+        sum = sum + arr[i];
+    }
+    min = sum - maxEle;
+    max = sum - minEle;
+    cout<<min<<" ";
+    cout<<max;
 }
 
 int main()
